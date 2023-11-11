@@ -1,0 +1,2 @@
+# NamasteMeditation
+The meditation app
