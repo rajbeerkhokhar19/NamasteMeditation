@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">NamasteMeditation</string>
+    <string name="app_name">Namaste Meditation</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="i_agree_to_the_terms_of_service_and_privacy_policy">I agree to the Terms and Conditions</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Your Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 </resources>
