@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMeditate"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:clipToPadding="false"
+            app:cardBackgroundColor="@color/green_039EA2"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toBottomOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDailyMeditation">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMeditate"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/img_calender"
+                app:tint="#FFFFFF" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDailyMeditation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Daily Meditation"
+            android:textColor="@color/black_000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cvMeditate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="98dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="11 Nov 2023"
+            android:textColor="@color/grey_ababab"
+            app:fontFamily="@font/raleway_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tvDailyMeditation"
+            app:layout_constraintStart_toStartOf="@id/tvDailyMeditation"
+            app:layout_constraintTop_toBottomOf="@+id/tvDailyMeditation"
+            tools:layout_editor_absoluteX="100dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

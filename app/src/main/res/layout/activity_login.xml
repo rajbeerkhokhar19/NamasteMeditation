@@ -16,7 +16,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageArrowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrow_left"
+            tools:src="@drawable/img_arrow_left" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtToolbarSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/login"
+            android:textColor="@color/black_000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -30,77 +51,102 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="42dp"
+            android:layout_marginTop="110dp"
             android:orientation="vertical"
             android:padding="24dp">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="50dp"
-                android:paddingTop="4dp"
-                android:text="Login"
-                android:textColor="@color/blue"
-                android:textSize="28sp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/rectangle_border_name_gray_300_radius_6"
+                android:drawableStart="@drawable/img_checkmark"
+                android:drawablePadding="16dp"
                 android:ellipsize="end"
-
+                android:fontFamily="@font/raleway_regular"
                 android:hint="@string/enter_your_email"
                 android:inputType="textEmailAddress"
-                android:padding="12dp"
+                android:padding="16dp"
                 android:textColor="#000000"
                 android:textColorHint="@color/grey_ababab"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="normal"
                 tools:ignore="Autofill" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/rectangle_border_name_gray_300_radius_6"
+                android:drawableStart="@drawable/img_lock"
+                android:drawablePadding="16dp"
                 android:ellipsize="end"
                 android:hint="@string/enter_your_password"
-                android:inputType="numberPassword"
-                android:padding="12dp"
+                android:inputType="textPassword"
+                android:padding="16dp"
                 android:textColor="@color/black_000000"
                 android:textColorHint="#ABABAB"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="normal"
                 tools:ignore="Autofill" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvForgotPassword"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
 
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
-                android:text="@string/forgot_password"
-                android:textColor="@color/blue"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_remember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me"
+                    android:paddingStart="6dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="textEnd"
+                    android:paddingVertical="10dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/green_039EA2"
+                    android:textSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="32dp"
-                android:background="@color/blue"
+                android:background="@color/green_039EA2"
                 android:ellipsize="end"
-
+                android:fontFamily="@font/raleway_regular"
                 android:gravity="center"
                 android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/orangeLight"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_regular"
+                android:gravity="center"
+                android:text="Register"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
@@ -111,6 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_vertical"
+                android:visibility="gone"
                 android:orientation="horizontal">
 
                 <TextView
@@ -118,29 +165,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
-
+                    android:fontFamily="@font/raleway_regular"
                     android:singleLine="true"
-                    android:paddingTop="16dp"
-                    android:text="Already have an account?"
+                    android:text="@string/don_t_have_an_account"
                     android:textColor="@color/black_000000"
-                    android:textSize="14sp" />>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_vertical"
-                android:orientation="horizontal">
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/txtSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
-
-                    android:padding="10dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:paddingVertical="16dp"
+                    android:paddingHorizontal="8dp"
                     android:singleLine="true"
-                    android:text="Register"
+                    android:textStyle="bold"
+                    android:text="@string/sign_up"
                     android:textColor="@color/blue"
                     android:textSize="16sp" />
             </LinearLayout>

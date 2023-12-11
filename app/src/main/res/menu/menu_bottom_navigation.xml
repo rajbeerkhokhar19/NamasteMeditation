@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_home"
+            android:icon="@drawable/img_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/action_meditate"
+            android:icon="@drawable/img_meditate"
+            android:title="@string/meditate" />
+        <item
+            android:id="@+id/action_remind_me"
+            android:icon="@drawable/img_calender"
+            android:title="@string/remind_me" />
+
+        <item
+            android:id="@+id/action_profile"
+            android:icon="@drawable/img_profile"
+            android:title="@string/profile" />
+    </group>
+
+</menu>
